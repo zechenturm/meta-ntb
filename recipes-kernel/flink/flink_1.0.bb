@@ -8,7 +8,7 @@ LICENSE = "CLOSED"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 
-SRCREV = "a1f5565fd989ca1de1b66f5f44b9a7a983567d9a"
+SRCREV = "f6794756fb448ea38fe7ae575178b8729f512ec9"
 SRC_URI = "gitsm://github.com/zechenturm/flinklinux.git"
 
 S = "${WORKDIR}/git"
