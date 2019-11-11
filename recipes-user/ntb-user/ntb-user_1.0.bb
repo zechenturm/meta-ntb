@@ -27,7 +27,7 @@ USERADD_PARAM_${PN} = "-u 1000 -d /home/ntb -r -s /bin/bash -p 6WO85m3SZ4Cw6 ntb
 
 do_install () {
 	install -d ${D}/home/ntb
-	install -p -m 644 file1 ${D}/home/ntb
+	install -p -m 644 hello.txt ${D}/home/ntb
 	chown -R ntb:ntb ${D}/home/ntb
 }
 
