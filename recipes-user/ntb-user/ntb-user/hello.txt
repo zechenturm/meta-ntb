@@ -1,0 +1,2 @@
+Hello! This file only exists to make sure the buildsystem adds the user properly.
+This file can safely deleted on the image itself.
