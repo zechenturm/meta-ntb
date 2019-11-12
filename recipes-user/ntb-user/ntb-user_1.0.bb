@@ -5,6 +5,8 @@ PR = "r1"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
 
+RDEPENDS_${PN} = "sudo"
+
 # We need a file to make bitbake actually build this recipe and add the user
 SRC_URI = "file://hello.txt"
 
@@ -33,7 +35,7 @@ do_install () {
         echo "ntb ALL=(ALL) ALL" > ${D}${sysconfdir}/sudoers.d/ntb
 }
 
-FILES_${PN} = "/home/ntb/*"
+FILES_${PN} = "/home/ntb/* /etc/sudoers.d/ntb"
 
 # Prevents do_package failures with:
 # debugsources.list: No such file or directory:
