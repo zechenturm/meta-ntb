@@ -29,6 +29,8 @@ do_install () {
 	install -d ${D}/home/ntb
 	install -p -m 644 hello.txt ${D}/home/ntb
 	chown -R ntb:ntb ${D}/home/ntb
+	install -d -m 600 ${D}${sysconfdir}/sudoers.d
+        echo "ntb ALL=(ALL) ALL" > ${D}${sysconfdir}/sudoers.d/ntb
 }
 
 FILES_${PN} = "/home/ntb/*"
