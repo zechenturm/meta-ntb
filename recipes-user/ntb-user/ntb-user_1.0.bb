@@ -7,6 +7,10 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384
 
 RDEPENDS_${PN} = "sudo"
 
+#prevent ' Error: Transaction check error: file /etc/sudoers.d conflicts between attempted installs of ntb-user-1.0-r1.core2_64 and sudo-1.8.27-r0.core2_64'
+# apparently this just needs to be a non empty string?
+DIRFILES = "whatever"
+
 # We need a file to make bitbake actually build this recipe and add the user
 SRC_URI = "file://hello.txt"
 
