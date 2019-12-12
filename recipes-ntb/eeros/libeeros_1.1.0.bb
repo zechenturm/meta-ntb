@@ -1,6 +1,8 @@
 DESCRIPTION = "Example Hello World"
 SECTION = "ntb"
-DEPENDS = ""
+DEPENDS = "ncurses"
+RDEPENDS_${PN} = "ncurses"
+
 LICENSE = "APACHE2"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=7802ae218faa7577460854b57028fbba"
 
