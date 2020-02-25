@@ -1,0 +1,6 @@
+#!/bin/sh
+modprobe fpga_loader
+dd if=/lib/firmware/cb20.rbf of=/dev/fpga_loader bs=4M
+rmmod fpga_loader
+modprobe flink_eim
+lsflink

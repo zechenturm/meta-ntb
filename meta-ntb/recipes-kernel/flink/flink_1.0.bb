@@ -8,8 +8,12 @@ LICENSE = "CLOSED"
 
 #FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
-SRCREV = "f6794756fb448ea38fe7ae575178b8729f512ec9"
-SRC_URI = "gitsm://github.com/zechenturm/flinklinux.git file://cb20.rbf"
+SRCREV = "cbe8838b27c1446260d0ba97157364eff46206a9"
+#SRCREV = "f6794756fb448ea38fe7ae575178b8729f512ec9"
+SRC_URI = "gitsm://github.com/zechenturm/flinklinux.git;branch=debug \
+file://cb20.rbf \
+file://blacklist.conf \
+file://initflink "
 
 S = "${WORKDIR}/git"
 
@@ -17,14 +21,21 @@ inherit module
 
 export KERNELDIR="${KERNEL_SRC}"
 
-EXTRA_CFLAGS += "-D DBG"
+OEEXTRA_CFLAGS += "-D DBG"
 
-FILES_${PN} += "/lib/firmware/cb20.rbf"
+FILES_${PN} += "/lib/firmware/cb20.rbf \
+								/etc/modprobe.d/blacklist.conf \
+								/usr/bin/initflink"
 
 do_install_append () {
 	install -d ${D}/lib/firmware
-	pwd
-	ls
+	
+	install -d ${D}/etc/modprobe.d
+	install -m 644 ../blacklist.conf ${D}/etc/modprobe.d/
+
+	install -d ${D}/usr/bin
+	install -m 755 ../initflink ${D}/usr/bin/
+	
 	# working dir is ${WORKDIR}/git, but cb20.rbf is in ${WORKDIR}
 	install -m 644 ../cb20.rbf ${D}/lib/firmware/
 }
