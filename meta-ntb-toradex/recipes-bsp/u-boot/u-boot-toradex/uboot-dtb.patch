@@ -1,0 +1,13 @@
+diff --git a/include/configs/colibri_imx6.h b/include/configs/colibri_imx6.h
+index 86f3f0d4fa..88e41098c4 100644
+--- a/include/configs/colibri_imx6.h
++++ b/include/configs/colibri_imx6.h
+@@ -184,7 +184,7 @@
+ 	"usbfinduuid=part uuid usb ${usbdev}:${usbrootpart} uuid\0" \
+ 	"usbrootpart=2\0"
+ 
+-#define FDT_FILE "imx6dl-colibri-eval-v3.dtb"
++#define FDT_FILE "imx6dl-colibri-cb20.dtb"
+ #define CONFIG_EXTRA_ENV_SETTINGS \
+ 	BOOTENV \
+ 	"bootcmd=run emmcboot ; echo ; echo emmcboot failed ; " \
