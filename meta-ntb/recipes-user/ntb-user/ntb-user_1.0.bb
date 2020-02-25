@@ -29,7 +29,7 @@ USERADD_PACKAGES = "${PN}"
 # you inherit useradd.
 
 # add user ntb with uid 1000 and password 'ntb'
-USERADD_PARAM_${PN} = "-u 1000 -d /home/ntb -r -s /bin/bash -p 6WO85m3SZ4Cw6 ntb"
+USERADD_PARAM_${PN} = "-u 1000 -d /home/ntb -r -s /bin/sh -p 6WO85m3SZ4Cw6 ntb"
 
 do_install () {
 	install -d ${D}/home/ntb
