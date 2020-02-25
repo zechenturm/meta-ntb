@@ -1,0 +1,9 @@
+[Unit]
+Description=Start udhcpc DHCP client
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/udhcpc
+
+[Install]
+WantedBy=network.target
