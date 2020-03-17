@@ -2,7 +2,7 @@ DESCRIPTION = "Example Hello World"
 SECTION = "ntb"
 DEPENDS = "ncurses libucl"
 RDEPENDS_${PN} = "ncurses"
-RDEPENDS_${PN}-dev = "ncurses-dev libucl-dev"
+RDEPENDS_${PN}-dev = "ncurses-dev libucl-dev libucl-dev"
 
 LICENSE = "APACHE2"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=7802ae218faa7577460854b57028fbba"
@@ -15,8 +15,7 @@ SRC_URI = "git://github.com/eeros-project/eeros-framework.git"
 
 S = "${WORKDIR}/git"
 
-FILES_${PN} += ""
-FILES_${PN}-dev = "${libdir}/*.so \
+FILES_${PN}-dev += "${libdir}/*.so \
   ${includedir} \
   /usr/lib/EEROS \
   /usr/lib/pkgconfig \

@@ -11,6 +11,8 @@
 LICENSE = "Unknown"
 LIC_FILES_CHKSUM = "file://COPYING;md5=cc68f946f0525423bffbbe3432f948af"
 
+DEPENDS = "pkgconfig"
+
 SRC_URI = "git://github.com/vstakhov/libucl;protocol=https"
 
 # Modify these as desired
@@ -22,6 +24,5 @@ S = "${WORKDIR}/git"
 #inherit cmake
 inherit autotools
 
-# Specify any options you want to pass to cmake using EXTRA_OECMAKE:
-EXTRA_OECMAKE = ""
+TOOLCHAIN_TARGET_TASK_append = "${PN}-src"
 
