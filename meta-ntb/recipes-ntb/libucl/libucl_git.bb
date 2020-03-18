@@ -24,5 +24,3 @@ S = "${WORKDIR}/git"
 #inherit cmake
 inherit autotools
 
-TOOLCHAIN_TARGET_TASK_append = "${PN}-src"
-
