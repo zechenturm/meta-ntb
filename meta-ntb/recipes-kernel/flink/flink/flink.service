@@ -1,0 +1,9 @@
+[Unit]
+Description=Initialize flink FPGA
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/initflink
+
+[Install]
+WantedBy=multi-user.target
