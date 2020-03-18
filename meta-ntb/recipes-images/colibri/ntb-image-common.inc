@@ -1,6 +1,6 @@
 require recipes-core/images/core-image-minimal.bb
 
-DESRIPTION = "core image with NTB specific software and libraries"
+SUMMARY = "core image with NTB specific software and libraries"
 
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
