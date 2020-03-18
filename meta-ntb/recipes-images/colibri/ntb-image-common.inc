@@ -7,7 +7,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384
 
 CORE_IMAGE_EXTRA_INSTALL_append = " ntb-user udhcpc-service nano"
 
-CORE_IMAGE_EXTRA_INSTALL_append_cb20 = " fpga-loader flink-dev flinklib-dev libeeros-dev flink-eeros-dev"
+CORE_IMAGE_EXTRA_INSTALL_append_cb20 = " fpga-loader flink-dev flinklib-dev"
 
 CORE_IMAGE_EXTRA_INSTALL_append_cx2020 = " atemsys ecmasterlib ecmaster acontis-demos"
 
