@@ -1,6 +1,7 @@
 DESCRIPTION = "FPGA Loader Kernel Module"
 SECTION = "ntb"
 DEPENDS = ""
+RDEPENDS_${PN} = "flinklib fpga-loader"
 
 LICENSE = "CLOSED"
 #LICENSE = "MIT"
