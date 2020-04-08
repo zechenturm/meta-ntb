@@ -11,6 +11,10 @@ CORE_IMAGE_EXTRA_INSTALL_append_cb20 = " fpga-loader flink-dev flinklib-dev"
 
 CORE_IMAGE_EXTRA_INSTALL_append_cx2020 = " atemsys ecmasterlib ecmaster acontis-demos"
 
+CORE_IMAGE_EXTRA_INSTALL_append_bblue = "wpa-supplicant linux-firmware wlan0-up"
+
+DISTRO_FEATURES_append_bblue " wifi virtualization systemd"
+
 IMAGE_FEATURES += "ssh-server-dropbear"
 
 MACHINE_EXTRA_RRECOMMENDS += "kernel-modules"
