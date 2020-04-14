@@ -11,7 +11,7 @@ CORE_IMAGE_EXTRA_INSTALL_append_cb20 = " fpga-loader flink-dev flinklib-dev udhc
 
 CORE_IMAGE_EXTRA_INSTALL_append_cx2020 = " atemsys ecmasterlib ecmaster acontis-demos"
 
-CORE_IMAGE_EXTRA_INSTALL_append_bblue = " wpa-supplicant linux-firmware"
+CORE_IMAGE_EXTRA_INSTALL_append_bblue = " wpa-supplicant linux-firmware wpa-supplicant-service udhcpc-service"
 
 DISTRO_FEATURES_append_bblue = " wifi virtualization systemd"
 
