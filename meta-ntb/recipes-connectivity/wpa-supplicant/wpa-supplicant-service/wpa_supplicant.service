@@ -2,7 +2,7 @@
 Description=bring up wlan0 using wpa_supplicant
 
 [Service]
-Type=daemon
+Type=forking
 ExecStart=wpa_supplicant -i wlan0 -B -c /etc/wpa_supplicant.conf
 
 [Install]
