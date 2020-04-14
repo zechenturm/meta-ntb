@@ -1,0 +1,9 @@
+[Unit]
+Description=bring up wlan0 using wpa_supplicant
+
+[Service]
+Type=daemon
+ExecStart=wpa_supplicant -i wlan0 -B -c /etc/wpa_supplicant.conf
+
+[Install]
+WantedBy=network.target
