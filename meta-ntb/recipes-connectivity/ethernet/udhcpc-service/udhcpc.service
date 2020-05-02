@@ -4,6 +4,7 @@ Description=Start udhcpc DHCP client
 [Service]
 Type=oneshot
 ExecStart=/sbin/udhcpc
+TimeoutSec=30
 
 [Install]
 WantedBy=network.target
