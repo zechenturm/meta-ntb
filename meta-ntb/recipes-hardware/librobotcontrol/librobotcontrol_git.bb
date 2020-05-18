@@ -6,10 +6,11 @@ LICENSE="MIT"
 
 LIC_FILES_CHKSUM = "file://../git/LICENSE;md5=a65fcacc5a132253d0b59535e425a992"
 
-SRC_URI = "git://github.com/StrawsonDesign/librobotcontrol;protocol=git \
+SRC_URI = "git://github.com/StrawsonDesign/librobotcontrol;protocol=git;branch=v1.1 \
   file://librc.patch"
 
-SRCREV = "V1.0.4"
+# SRCREV = "V1.0.4"
+SRCREV = "6bd82931ea6484568661c977cea1bfd0adbdafeb"
 
 S = "${WORKDIR}/git"
 
