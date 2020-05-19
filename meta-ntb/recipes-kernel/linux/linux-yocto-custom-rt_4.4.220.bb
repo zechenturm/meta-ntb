@@ -58,16 +58,22 @@ require recipes-kernel/linux/linux-yocto.inc
 
 #FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 
-SRC_URI = "https://mirrors.edge.kernel.org/pub/linux/kernel/v4.x/linux-4.4.208.tar.gz \
-https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/4.4/patch-4.4.208-rt191.patch.xz;name=rt-patch \
-file://defconfig \
-"
+# SRC_URI = "https://mirrors.edge.kernel.org/pub/linux/kernel/v4.x/linux-4.4.2.tar.gz \
+# https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/4.4/patch-4.4.220-rt197.patch.xz;name=rt-patch \
+# file://defconfig \
+# "
 
-SRC_URI[md5sum] = "73f5623b8441001ef607482f16e54177"
-SRC_URI[rt-patch.md5sum] = "78015cbfaaa6df5d6ff9ca71fa213723"
-S = "${WORKDIR}/linux-4.4.208"
+# SRC_URI[md5sum] = "b319948f259640defbdecb1878c02754"
+# SRC_URI[rt-patch.md5sum] = "5f370aaf4f8e6e1345def1ec74b1eee0"
+# S = "${WORKDIR}/linux-4.4.2"
 
-LINUX_VERSION ?= "4.4.208"
+SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/rt/linux-stable-rt.git;branch=v4.4-rt-rebase file://defconfig"
+
+SRCREV = "v4.4.220-rt197-rebase"
+
+S = "${WORKDIR}/git"
+
+LINUX_VERSION ?= "4.4.220"
 LINUX_VERSION_EXTENSION_append = "-custom"
 
 # Modify SRCREV to a different commit hash in a copy of this recipe to
