@@ -9,7 +9,7 @@ CORE_IMAGE_EXTRA_INSTALL_append = " ost-user"
 
 CORE_IMAGE_EXTRA_INSTALL_append_cb20 = " fpga-loader flink-dev flinklib-dev udhcpc-service"
 
-CORE_IMAGE_EXTRA_INSTALL_append_cx2020 = " atemsys ecmasterlib ecmaster acontis-demos"
+CORE_IMAGE_EXTRA_INSTALL_append_cx2020 = " atemsys ecmasterlib ecmaster acontis-demos libemllccat"
 
 CORE_IMAGE_EXTRA_INSTALL_append_bblue = " wpa-supplicant linux-firmware wpa-supplicant-service udhcpc-service librobotcontrol"
 
