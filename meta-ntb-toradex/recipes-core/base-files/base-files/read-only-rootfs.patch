@@ -1,0 +1,12 @@
+diff --git a/recipes-core/base-files/base-files/fstab b/recipes-core/base-files/base-files/fstab
+index ab73d00..45bf80b 100644
+--- a/fstab
++++ b/fstab
+@@ -1,6 +1,6 @@
+ # stock fstab - you probably want to override this with a machine specific one
+ 
+-/dev/root            /                    auto       noatime               1  1
++/dev/root            /                    auto       noatime,ro            1  1
+ proc                 /proc                proc       defaults              0  0
+ devpts               /dev/pts             devpts     mode=0620,gid=5       0  0
+ usbdevfs             /proc/bus/usb        usbdevfs   noauto                0  0
