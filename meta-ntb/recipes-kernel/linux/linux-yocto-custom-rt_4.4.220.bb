@@ -67,7 +67,7 @@ require recipes-kernel/linux/linux-yocto.inc
 # SRC_URI[rt-patch.md5sum] = "5f370aaf4f8e6e1345def1ec74b1eee0"
 # S = "${WORKDIR}/linux-4.4.2"
 
-SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/rt/linux-stable-rt.git;branch=v4.4-rt-rebase file://defconfig"
+SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/rt/linux-stable-rt.git;nobranch=1 file://defconfig"
 
 SRCREV = "v4.4.220-rt197-rebase"
 
