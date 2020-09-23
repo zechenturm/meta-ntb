@@ -13,11 +13,14 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=cc68f946f0525423bffbbe3432f948af"
 
 DEPENDS = "pkgconfig"
 
-SRC_URI = "git://github.com/vstakhov/libucl;protocol=https"
+# SRC_URI = "git://github.com/vstakhov/libucl;protocol=https"
+
+SRC_URI = "git://github.com/eeros-project/libucl.git;protocol=https"
 
 # Modify these as desired
 PV = "1.0+git${SRCPV}"
-SRCREV = "42c4d05ca2c00e087376ff73a2dae906be7cad6d"
+# SRCREV = "42c4d05ca2c00e087376ff73a2dae906be7cad6d"
+SRCREV = "7861eddd05ad329424ece3967db350613dbd2d8d"
 
 S = "${WORKDIR}/git"
 
