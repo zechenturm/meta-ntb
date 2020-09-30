@@ -12,7 +12,9 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 # SRCREV = "v1.1.0"
 SRCREV = "926437eeee31ccecbce6e4dc5f95654ce22b4ac2"
 
-SRC_URI = "git://github.com/eeros-project/eeros-framework.git file://fix-libucl-paths.patch"
+SRC_URI = "git://github.com/eeros-project/eeros-framework.git \
+           file://0001-fix-libucl-paths.patch \
+           "
 
 S = "${WORKDIR}/git"
 
