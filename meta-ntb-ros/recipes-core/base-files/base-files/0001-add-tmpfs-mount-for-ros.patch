@@ -1,0 +1,26 @@
+From 569d7de2e3318d56d9290399d1307e79ab74b79a Mon Sep 17 00:00:00 2001
+From: Moritz Lammerich <moritz.lammerich@ost.ch>
+Date: Tue, 13 Oct 2020 15:33:08 +0200
+Subject: [PATCH] add tmpfs mount for ros
+
+---
+ fstab | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/fstab b/fstab
+index 70e400f..4949cfe 100644
+--- a/fstab
++++ b/fstab
+@@ -6,6 +6,9 @@ devpts               /dev/pts             devpts     mode=0620,ptmxmode=0666,gid
+ tmpfs                /run                 tmpfs      mode=0755,nodev,nosuid,strictatime 0  0
+ tmpfs                /var/volatile        tmpfs      defaults              0  0
+ 
++#ros needs writable ~/.ros
++tmpfs                /home/ost/.ros       tmpfs      defaults,uid=ost,gid=ost 0  0
++
+ # uncomment this if your device has a SD/MMC/Transflash slot
+ #/dev/mmcblk0p1       /media/card          auto       defaults,sync,noauto  0  0
+ 
+-- 
+2.28.0
+
