@@ -1,5 +1,3 @@
-require recipes-core/images/core-image-minimal.bb
-
 SUMMARY = "core image with NTB specific software and libraries"
 
 LICENSE = "MIT"
