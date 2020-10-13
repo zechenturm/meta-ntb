@@ -1,6 +1,6 @@
 python () {
     if d.getVar('NTB_DEVBUILD') == '1':
-        d.appendVar('CORE_IMAGE_EXTRA_INSTALL', ' rt-tests file strace usbutils util-linux libstdc++ nano tree pciutils lshw')
+        d.appendVar('CORE_IMAGE_EXTRA_INSTALL', ' rt-tests file strace usbutils util-linux libstdc++ tree pciutils lshw')
     else:
         image_features = d.getVar('EXTRA_IMAGE_FEATURES', True)
         feature_list = image_features.split(' ')
