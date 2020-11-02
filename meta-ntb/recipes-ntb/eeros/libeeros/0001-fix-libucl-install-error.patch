@@ -1,0 +1,25 @@
+From 616a45112f8691d83d88b506aff983c5fbc57355 Mon Sep 17 00:00:00 2001
+From: Moritz Lammerich <moritz.lammerich@ost.ch>
+Date: Mon, 2 Nov 2020 10:23:54 +0100
+Subject: [PATCH] fix libucl install error
+
+---
+ CMakeLists.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ae675b3..6740ff2 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -29,9 +29,9 @@ INSTALL(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/includes/eeros DESTINATION include
+ 
+ ## Install CMake configuration file
+ set(INCLUDE_INSTALL_DIR "include/")
+-set(LIBUCL_INCLUDE_DIR "/usr/include")
++set(LIBUCL_INCLUDE_DIR "${CMAKE_CURRENT_BINARY_DIR}/libucl-src/include")
+ set(LIB_INSTALL_DIR lib/)
+-set(LIBUCL_LINK_DIR "/usr/lib")
++set(LIBUCL_LINK_DIR "${CMAKE_CURRENT_BINARY_DIR}/libucl-build")
+ 
+ include(CMakePackageConfigHelpers)
+ 

@@ -10,10 +10,11 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=7802ae218faa7577460854b57028fbba"
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 
 # SRCREV = "v1.1.0"
-SRCREV = "926437eeee31ccecbce6e4dc5f95654ce22b4ac2"
+SRCREV = "${AUTOREV}"
 
 SRC_URI = "git://github.com/eeros-project/eeros-framework.git \
            file://0001-fix-libucl-paths.patch \
+           file://0001-fix-libucl-install-error.patch \
            "
 
 S = "${WORKDIR}/git"
