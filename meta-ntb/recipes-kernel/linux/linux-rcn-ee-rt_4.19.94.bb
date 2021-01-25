@@ -5,11 +5,13 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=bbea815ee2795b2f4230826c0c6b8814"
 
 #SRC_URI = "git://github.com/RobertCNelson/linux-stable-rcn-ee file://defconfig"
 SRC_URI = "git:///home/ubuntu/yakbuild/linux-stable-rcn-ee \
-https://github.com/beagleboard/linux/raw/f2015285e55e70f32a9464d7ae95695cd831e4fb/firmware/am335x-pm-firmware.elf;name=am335x-pm-firmware.elf \
-https://github.com/beagleboard/linux/raw/f2015285e55e70f32a9464d7ae95695cd831e4fb/firmware/am335x-bone-scale-data.bin;name=am335x-bone-scale-data.bin \
-https://github.com/beagleboard/linux/raw/f2015285e55e70f32a9464d7ae95695cd831e4fb/firmware/am335x-evm-scale-data.bin;name=am335x-evm-scale-data.bin \
-https://github.com/beagleboard/linux/raw/f2015285e55e70f32a9464d7ae95695cd831e4fb/firmware/am43x-evm-scale-data.bin;name=am43x-evm-scale-data.bin \
-file://defconfig"
+           https://github.com/beagleboard/linux/raw/f2015285e55e70f32a9464d7ae95695cd831e4fb/firmware/am335x-pm-firmware.elf;name=am335x-pm-firmware.elf \
+           https://github.com/beagleboard/linux/raw/f2015285e55e70f32a9464d7ae95695cd831e4fb/firmware/am335x-bone-scale-data.bin;name=am335x-bone-scale-data.bin \
+           https://github.com/beagleboard/linux/raw/f2015285e55e70f32a9464d7ae95695cd831e4fb/firmware/am335x-evm-scale-data.bin;name=am335x-evm-scale-data.bin \
+           https://github.com/beagleboard/linux/raw/f2015285e55e70f32a9464d7ae95695cd831e4fb/firmware/am43x-evm-scale-data.bin;name=am43x-evm-scale-data.bin \
+           file://defconfig \
+           file://0001-enable-PRU.patch \
+           "
 
 SRC_URI[am335x-pm-firmware.elf.md5sum] = "bf399da2ac3e91bbf2d279fb0487774e"
 SRC_URI[am335x-bone-scale-data.bin.md5sum] = "0516d72d4c1ffdf5a175368d9d9f8cb2"

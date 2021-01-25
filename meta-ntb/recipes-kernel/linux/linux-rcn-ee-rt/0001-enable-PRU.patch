@@ -1,0 +1,34 @@
+From 7986073beae0b7af30147945535a6e30bbc27b9c Mon Sep 17 00:00:00 2001
+From: OpenEmbedded <oe.patch@oe>
+Date: Mon, 25 Jan 2021 12:43:27 +0000
+Subject: [PATCH] enable PRU
+
+---
+ arch/arm/boot/dts/am335x-boneblue.dts | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/arch/arm/boot/dts/am335x-boneblue.dts b/arch/arm/boot/dts/am335x-boneblue.dts
+index b879d467c..b7722692f 100644
+--- a/arch/arm/boot/dts/am335x-boneblue.dts
++++ b/arch/arm/boot/dts/am335x-boneblue.dts
+@@ -691,13 +691,13 @@
+ 	ti,scale-data-fw = "am335x-bone-scale-data.bin";
+ };
+ 
+-//&pruss_soc_bus {
+-//	status = "okay";
+-//
+-//	pruss: pruss@4a300000 {
+-//		status = "okay";
+-//	};
+-//};
++&pruss_soc_bus {
++	status = "okay";
++
++	pruss: pruss@4a300000 {
++		status = "okay";
++	};
++};
+ 
+ &dcan1 {
+ 	pinctrl-names = "default";
