@@ -1,5 +1,5 @@
---- fstab.org	2021-01-27 13:44:00.368806665 +0000
-+++ fstab	2021-01-27 13:44:11.882097567 +0000
+--- a/fstab	2021-01-27 13:44:00.368806665 +0000
++++ b/fstab	2021-01-27 13:44:11.882097567 +0000
 @@ -1,6 +1,6 @@
  # stock fstab - you probably want to override this with a machine specific one
  
