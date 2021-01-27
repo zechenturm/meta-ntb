@@ -1,12 +1,10 @@
-diff --git a/recipes-core/base-files/base-files/fstab b/recipes-core/base-files/base-files/fstab
-index ab73d00..45bf80b 100644
---- a/fstab
-+++ b/fstab
+--- fstab.org	2021-01-27 13:44:00.368806665 +0000
++++ fstab	2021-01-27 13:44:11.882097567 +0000
 @@ -1,6 +1,6 @@
  # stock fstab - you probably want to override this with a machine specific one
  
 -/dev/root            /                    auto       noatime               1  1
 +/dev/root            /                    auto       noatime,ro            1  1
+ /dev/emmc-part1      /boot                auto       noatime,noauto        0  0
  proc                 /proc                proc       defaults              0  0
  devpts               /dev/pts             devpts     mode=0620,gid=5       0  0
- usbdevfs             /proc/bus/usb        usbdevfs   noauto                0  0

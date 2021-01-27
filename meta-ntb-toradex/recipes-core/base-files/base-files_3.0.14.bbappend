@@ -2,4 +2,4 @@ FILESEXTRAPATHS_prepend = "${TOPDIR}/../layers/meta-ntb/meta-ntb-toradex/recipes
 
 inherit utils
 
-# SRC_URI_append = "${@oe.utils.conditional('NTB_DEVBUILD', '1', '', ' file://read-only-rootfs.patch', d)}"
+# SRC_URI_append = "${@oe.utils.conditional('NTB_DEVBUILD', '1', '', ' file://fix-readonly-rootfs.patch', d)}"
