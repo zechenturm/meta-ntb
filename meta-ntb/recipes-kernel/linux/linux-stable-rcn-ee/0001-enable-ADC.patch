@@ -1,0 +1,32 @@
+From 0816e348b93b14dd0c460d2b9635be0470f63253 Mon Sep 17 00:00:00 2001
+From: Moritz Lammerich <moritz.lammerich@ost.ch>
+Date: Mon, 15 Feb 2021 10:53:25 +0000
+Subject: [PATCH] enable ADC
+
+---
+ arch/arm/boot/dts/am335x-boneblue.dts | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/arch/arm/boot/dts/am335x-boneblue.dts b/arch/arm/boot/dts/am335x-boneblue.dts
+index 21d129f75..a20880660 100644
+--- a/arch/arm/boot/dts/am335x-boneblue.dts
++++ b/arch/arm/boot/dts/am335x-boneblue.dts
+@@ -656,12 +656,12 @@
+ 	};
+ };
+ 
+-//&tscadc {
+-//	status = "okay";
+-//	adc {
+-//		ti,adc-channels = <0 1 2 3 4 5 6 7>;
+-//	};
+-//};
++&tscadc {
++	status = "okay";
++	adc {
++	ti,adc-channels = <0 1 2 3 4 5 6 7>;
++	};
++};
+ 
+ &uart3 {
+ 	pinctrl-names = "default";
