@@ -1,0 +1,27 @@
+From ad2a848d342f2a7d2362c0aa2df5145a0ebcb461 Mon Sep 17 00:00:00 2001
+From: Moritz Lammerich <moritz.lammerich@ost.ch>
+Date: Mon, 15 Feb 2021 17:01:05 +0100
+Subject: [PATCH] update eeros version and add install target
+
+---
+ CMakeLists.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 2d15199..5c73a26 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -5,7 +5,7 @@ project(simpleMotorControl)
+ set(CMAKE_CXX_STANDARD 14)
+ 
+ 
+-set(RECOMMENDED_EEROS_VERSION 1.1.0.0)
++set(RECOMMENDED_EEROS_VERSION 1.2.0.0)
+ set(RECOMMENDED_SIM_EEROS_VERSION 1.0.0.0)
+ set(RECOMMENDED_FLINK_EEROS_VERSION 1.0.0.0)
+ set(RECOMMENDED_BBBLUE_EEROS_VERSION 1.2.0.0)
+@@ -76,3 +76,4 @@ add_custom_command(OUTPUT copyHalConfig POST_BUILD COMMAND ${CMAKE_COMMAND} -E c
+ add_executable(simpleMotorControl SimpleMotorControl.cpp ControlSystem.cpp SMCSafetyProperties.cpp copyHalConfig)
+ target_link_libraries(simpleMotorControl eeros ucl ${CMAKE_DL_LIBS})
+ 
++install(TARGETS simpleMotorControl DESTINATION bin)
