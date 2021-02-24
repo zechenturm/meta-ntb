@@ -11,4 +11,4 @@ python () {
         d.appendVar('EXTRA_IMAGE_FEATURES', ' read-only-rootfs')
 }
 
-require recipes-images/colibri/ntb-image-common.inc
+require recipes-images/base/ntb-image-common.inc
