@@ -2,6 +2,12 @@
 Name=usb0
 
 [Network]
-Address=192.168.7.2/24
-Gateway=192.168.7.3
-DNS=8.8.8.8
+DNS=0.0.0.0
+
+[Address]
+Address=192.168.7.2
+
+[Route]
+Destination=192.168.7.0/24
+Gateway=192.168.7.2
+
